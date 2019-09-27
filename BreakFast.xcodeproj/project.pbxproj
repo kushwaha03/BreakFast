@@ -14,6 +14,21 @@
 		8B53DD57233B3FD30003D29F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B53DD55233B3FD30003D29F /* LaunchScreen.storyboard */; };
 		8B53DD62233B3FD30003D29F /* BreakFastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53DD61233B3FD30003D29F /* BreakFastTests.swift */; };
 		8B53DD6D233B3FD30003D29F /* BreakFastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53DD6C233B3FD30003D29F /* BreakFastUITests.swift */; };
+		8B53DD7B233B4A320003D29F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53DD7A233B4A320003D29F /* LoginVC.swift */; };
+		8B53DD7D233B54B10003D29F /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53DD7C233B54B10003D29F /* SignUpVC.swift */; };
+		8B53DD7F233B60C80003D29F /* VerifyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53DD7E233B60C80003D29F /* VerifyVC.swift */; };
+		8B53DD81233B62E40003D29F /* ForgotPassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53DD80233B62E40003D29F /* ForgotPassVC.swift */; };
+		8B53DD83233B64BF0003D29F /* ChangePassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53DD82233B64BF0003D29F /* ChangePassVC.swift */; };
+		8B53DD85233B686F0003D29F /* DashTabBVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53DD84233B686F0003D29F /* DashTabBVC.swift */; };
+		8B53DD87233B68990003D29F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53DD86233B68990003D29F /* HomeVC.swift */; };
+		8B53DD89233B68B80003D29F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53DD88233B68B80003D29F /* ProfileVC.swift */; };
+		8B90DEB6233DD76E0005B507 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B90DEB5233DD76E0005B507 /* HomeCell.swift */; };
+		8B90DEB8233DE4360005B507 /* offerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B90DEB7233DE4360005B507 /* offerCell.swift */; };
+		8BAFE584233CCE1400AB59CE /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAFE583233CCE1400AB59CE /* MapVC.swift */; };
+		8BAFE586233CD0F300AB59CE /* GMSMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAFE585233CD0F300AB59CE /* GMSMapView.swift */; };
+		8BAFE588233CD3A400AB59CE /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAFE587233CD3A400AB59CE /* SearchVC.swift */; };
+		8BAFE58A233CD3C100AB59CE /* OrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAFE589233CD3C100AB59CE /* OrderVC.swift */; };
+		8BAFE58C233CDA1300AB59CE /* OrderConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAFE58B233CDA1300AB59CE /* OrderConfirmVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +62,21 @@
 		8B53DD68233B3FD30003D29F /* BreakFastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreakFastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B53DD6C233B3FD30003D29F /* BreakFastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakFastUITests.swift; sourceTree = "<group>"; };
 		8B53DD6E233B3FD30003D29F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B53DD7A233B4A320003D29F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		8B53DD7C233B54B10003D29F /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		8B53DD7E233B60C80003D29F /* VerifyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyVC.swift; sourceTree = "<group>"; };
+		8B53DD80233B62E40003D29F /* ForgotPassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassVC.swift; sourceTree = "<group>"; };
+		8B53DD82233B64BF0003D29F /* ChangePassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassVC.swift; sourceTree = "<group>"; };
+		8B53DD84233B686F0003D29F /* DashTabBVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashTabBVC.swift; sourceTree = "<group>"; };
+		8B53DD86233B68990003D29F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		8B53DD88233B68B80003D29F /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		8B90DEB5233DD76E0005B507 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		8B90DEB7233DE4360005B507 /* offerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = offerCell.swift; sourceTree = "<group>"; };
+		8BAFE583233CCE1400AB59CE /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		8BAFE585233CD0F300AB59CE /* GMSMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMSMapView.swift; sourceTree = "<group>"; };
+		8BAFE587233CD3A400AB59CE /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		8BAFE589233CD3C100AB59CE /* OrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderVC.swift; sourceTree = "<group>"; };
+		8BAFE58B233CDA1300AB59CE /* OrderConfirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +130,21 @@
 				8B53DD4C233B3FD10003D29F /* AppDelegate.swift */,
 				8B53DD4E233B3FD10003D29F /* ViewController.swift */,
 				8B53DD50233B3FD10003D29F /* Main.storyboard */,
+				8B90DEB5233DD76E0005B507 /* HomeCell.swift */,
+				8BAFE58B233CDA1300AB59CE /* OrderConfirmVC.swift */,
+				8BAFE583233CCE1400AB59CE /* MapVC.swift */,
+				8B53DD86233B68990003D29F /* HomeVC.swift */,
+				8B90DEB7233DE4360005B507 /* offerCell.swift */,
+				8B53DD88233B68B80003D29F /* ProfileVC.swift */,
+				8BAFE587233CD3A400AB59CE /* SearchVC.swift */,
+				8BAFE589233CD3C100AB59CE /* OrderVC.swift */,
+				8B53DD84233B686F0003D29F /* DashTabBVC.swift */,
+				8B53DD82233B64BF0003D29F /* ChangePassVC.swift */,
+				8B53DD80233B62E40003D29F /* ForgotPassVC.swift */,
+				8B53DD7E233B60C80003D29F /* VerifyVC.swift */,
+				8BAFE585233CD0F300AB59CE /* GMSMapView.swift */,
+				8B53DD7C233B54B10003D29F /* SignUpVC.swift */,
+				8B53DD7A233B4A320003D29F /* LoginVC.swift */,
 				8B53DD53233B3FD30003D29F /* Assets.xcassets */,
 				8B53DD55233B3FD30003D29F /* LaunchScreen.storyboard */,
 				8B53DD58233B3FD30003D29F /* Info.plist */,
@@ -256,8 +301,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B53DD89233B68B80003D29F /* ProfileVC.swift in Sources */,
+				8B53DD81233B62E40003D29F /* ForgotPassVC.swift in Sources */,
+				8B90DEB6233DD76E0005B507 /* HomeCell.swift in Sources */,
+				8B53DD83233B64BF0003D29F /* ChangePassVC.swift in Sources */,
+				8BAFE586233CD0F300AB59CE /* GMSMapView.swift in Sources */,
+				8B53DD7F233B60C80003D29F /* VerifyVC.swift in Sources */,
+				8BAFE58C233CDA1300AB59CE /* OrderConfirmVC.swift in Sources */,
+				8B53DD87233B68990003D29F /* HomeVC.swift in Sources */,
+				8BAFE584233CCE1400AB59CE /* MapVC.swift in Sources */,
+				8BAFE58A233CD3C100AB59CE /* OrderVC.swift in Sources */,
+				8B90DEB8233DE4360005B507 /* offerCell.swift in Sources */,
+				8B53DD7D233B54B10003D29F /* SignUpVC.swift in Sources */,
 				8B53DD4F233B3FD10003D29F /* ViewController.swift in Sources */,
+				8B53DD85233B686F0003D29F /* DashTabBVC.swift in Sources */,
+				8BAFE588233CD3A400AB59CE /* SearchVC.swift in Sources */,
 				8B53DD4D233B3FD10003D29F /* AppDelegate.swift in Sources */,
+				8B53DD7B233B4A320003D29F /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +493,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JAVKRN8TPF;
 				INFOPLIST_FILE = BreakFast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +511,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JAVKRN8TPF;
 				INFOPLIST_FILE = BreakFast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
