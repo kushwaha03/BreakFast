@@ -680,6 +680,7 @@
                                         <connections>
                                             <outlet property="addItmBtn" destination="feE-eN-4H5" id="UzL-0X-hay"/>
                                             <outlet property="addItmImg" destination="E0Z-4E-JhO" id="eIj-dK-mT2"/>
+                                            <outlet property="nmLbl" destination="9NY-8f-dMS" id="TfU-G3-5Id"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

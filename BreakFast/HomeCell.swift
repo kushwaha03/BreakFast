@@ -12,6 +12,7 @@ class HomeCell: UITableViewCell {
 
     @IBOutlet var addItmBtn: UIButton!
     
+    @IBOutlet var nmLbl: UILabel!
     @IBOutlet var addItmImg: UIImageView!
     
     override func awakeFromNib() {
