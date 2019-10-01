@@ -13,42 +13,27 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var xOffset:CGFloat = 10
 
     @IBOutlet var ordrContinueV: UIView!
+    @IBOutlet var yourLocationLbl: UILabel!
     
     @IBOutlet var homeItmTbl: UITableView!
     @IBOutlet var continuBtn: UIButton!
     var selectedCell:[Bool] = []
     var indexSelect = 0
     var isAddnRemoveCond = false
-    var ItemArr = ["Poha", "Kachori", "samosa"]
+    var catArr = ["North Adda", "Kerla Adda", "Kannada Adda"]
+    var catDiscArr = ["Northern India which include food of Jammu and Kashmir, Punjab, Chandigarh, Haryana, Himachal Pradesh, Rajasthan, Uttarakhand, Delhi, Uttar Pradesh and Bihar as well as central region like Madhya Pradesh.", "Kerala, a state in the south of India, is linked to its history, geography, demography and culture.", "Karnataka Food: Karnataka Famous Food For An Ultimate Culinary Journey. Neer Dosa. The word 'neer' means water in Tulu language. Korri Gassi. Korri means Chicken and Gassi means curry. Kundapura Koli Saaru. Mysore Masala Dosa. Allugedda. Mysore Pak. Coorg Pandi Curry."]
     override func viewDidLoad() {
         super.viewDidLoad()
-        continuBtn.layer.cornerRadius = 20
-        
-        ordrContinueV.isHidden = true
-        ordrContinueV.layer.borderWidth = 0.5
-        ordrContinueV.layer.borderColor = #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1)
-        
-        
-//        // Do any additional setup after loading the view.
-//        ForOffer()
+
+         if let presentAddress = UserDefaults.standard.string(forKey: "presentAddress") {
+        yourLocationLbl.text = presentAddress
+        }
+
     }
-//    func ForOffer() {
-//         for i in  0..<5 {
-//
-//        let offerbutton:UIButton = UIButton(frame: CGRect(x: xOffset, y: 5, width: 200, height: 120))
-//        self.xOffset = self.xOffset
-//            + 10 + offerbutton.frame.width
-////        offerbutton.backgroundColor = .green
-//            offerbutton.setImage(#imageLiteral(resourceName: "Coupon-4"), for: .normal)
-////        offerbutton.setTitle("Button", for: .normal)
-//        offerbutton.addTarget(self, action:#selector(self.buttonClicked), for: .touchUpInside)
-//        self.offerV.addSubview(offerbutton)
-//        }
-//
-//
-//    }
     @objc func buttonClicked() {
         print("Button Clicked")
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "OrderConfirmVC") as! OrderConfirmVC
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     
@@ -59,33 +44,22 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @objc func addItemInOrdr(sender:UIButton) {
+    @objc func catDetails(sender:UIButton) {
         print("button tag is :",sender.tag)
-//        selectedCell[sender.tag] = !selectedCell[sender.tag]
-//
-//        self.selectedCell = [Bool](repeating: false, count: 5)
-        indexSelect = sender.tag
-        self.homeItmTbl.reloadData()
-        if !isAddnRemoveCond {
-        ordrContinueV.isHidden = false
-            isAddnRemoveCond = true
-        } else {
-            ordrContinueV.isHidden = true
-            isAddnRemoveCond = false
-        }
-        
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CatDetailsVC") as! CatDetailsVC
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
-        
+    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0{
             return 1
         } else {
-            return 5
+            return catArr.count
 
         }
     }
@@ -94,12 +68,10 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             let Cell1 = tableView.dequeueReusableCell(withIdentifier: "offerCell") as? offerCell
             for i in  0..<5 {
                 
-                let offerbutton:UIButton = UIButton(frame: CGRect(x: xOffset, y: 5, width: 200, height: 120))
+                let offerbutton:UIButton = UIButton(frame: CGRect(x: xOffset, y: 5, width: 200, height: 150))
                 self.xOffset = self.xOffset
                     + 10 + offerbutton.frame.width
-                //        offerbutton.backgroundColor = .green
                 offerbutton.setImage(#imageLiteral(resourceName: "Coupon-4"), for: .normal)
-                //        offerbutton.setTitle("Button", for: .normal)
                 offerbutton.addTarget(self, action:#selector(self.buttonClicked), for: .touchUpInside)
                 Cell1?.offerV.addSubview(offerbutton)
             }
@@ -110,39 +82,17 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         else {
         let Cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? HomeCell
-            if isAddnRemoveCond && indexSelect == indexPath.row{
-               Cell?.addItmBtn.setTitle("     Remove", for: .normal)
-                Cell?.addItmImg.image = #imageLiteral(resourceName: "icons8-subtract-24(1)")
-                Cell?.addItmBtn.setTitleColor(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1), for: .normal)
-
-            } else {
-                Cell?.addItmBtn.setTitle("Add", for: .normal)
-                Cell?.addItmImg.image = #imageLiteral(resourceName: "ice-cream-24")
-                Cell?.addItmBtn.setTitleColor(#colorLiteral(red: 0, green: 0.6850365996, blue: 0.9128597379, alpha: 1), for: .normal)
-
-            }
-             Cell?.addItmBtn.tag = indexPath.row
-        Cell?.addItmBtn.addTarget(self, action: #selector(addItemInOrdr(sender:)), for: .touchUpInside)
+            Cell?.nmLbl.text = catArr[indexPath.row]
+            Cell?.discLbl.text = catDiscArr[indexPath.row]
+            Cell?.cellBtn.addTarget(self, action: #selector(catDetails(sender:)), for: .touchUpInside)
+            
         return Cell!
         }
         
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 125
-    }
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0{
-            return ""
-        }else if section == 1{
-          return "North Adda"
-        } else if section == 2{
-             return "Kerla Adda"
-        } else {
-            return "Kanada Adda"
-        }
-        return nil
-        
+        return 170
     }
     /*
     // MARK: - Navigation
